@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'; 
-import { RegisterComponent } from './auth/register/register.component';
-import { LoginComponent } from './auth/login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthRoutingModule } from './auth/auth-routing.module';
 
 export const routes: Routes = [
-  { path: '', component: RegisterComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  // { path: 'register', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: 'register', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: '', redirectTo: '/register', pathMatch: 'full' }, // Redirect to register by default
+  // { path: '**', redirectTo: '/register' } // Handle unknown routes
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AuthRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
