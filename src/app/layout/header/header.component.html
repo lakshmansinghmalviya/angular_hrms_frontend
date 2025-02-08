@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+    <span class="logo">MyApp</span>
+    
+    <span class="spacer"></span>
+  
+    <!-- Desktop Navigation -->
+    <div class="desktop-menu">
+      <button mat-button routerLink="/home">Home</button>
+      <button mat-button routerLink="/about">About</button>
+    </div>
+  
+    <!-- Mobile Navigation (Hamburger Menu) -->
+    <button mat-icon-button [matMenuTriggerFor]="mobileMenu" class="mobile-menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item routerLink="/home">Home</button>
+      <button mat-menu-item routerLink="/about">About</button>
+    </mat-menu>
+  
+    <!-- User Account Menu -->
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item routerLink="/profile">
+        <mat-icon>person</mat-icon> Profile
+      </button>
+      <button mat-menu-item routerLink="/settings">
+        <mat-icon>settings</mat-icon> Settings
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon> Logout
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  

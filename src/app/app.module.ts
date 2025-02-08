@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterComponent } from './auth/register/register.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { RegisterComponent } from './auth/register/register.component';
         MatFormFieldModule,
         MatButtonModule,
         MatCardModule,
+        LayoutModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

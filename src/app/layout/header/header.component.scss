@@ -1,0 +1,43 @@
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #1976d2; // Customize as per theme
+  
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  
+    .spacer {
+      flex: 1; // Pushes items to the right
+    }
+  
+    button {
+      color: white;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+  
+    mat-icon {
+      color: white;
+    }
+  
+    // Hide mobile menu by default
+    .mobile-menu {
+      display: none;
+    }
+  
+    // Responsive Design
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none; // Hide desktop menu on mobile
+      }
+      
+      .mobile-menu {
+        display: inline-flex; // Show mobile menu button
+      }
+    }
+  }
+  
