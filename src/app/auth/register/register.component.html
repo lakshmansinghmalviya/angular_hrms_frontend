@@ -1,3 +1,4 @@
+<!-- make the FormInputField and FormInputDate two child component and then use them here  -->
 <h1>Register Now</h1>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
@@ -6,7 +7,7 @@
         <input matInput formControlName="firstName" required>
     </mat-form-field>
 
-    <mat-form-field class="full-width">
+    <mat-form-field class="full-width" appearance="outline">
         <mat-label>Last Name</mat-label>
         <input matInput formControlName="lastName" required>
     </mat-form-field>
